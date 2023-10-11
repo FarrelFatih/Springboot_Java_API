@@ -26,6 +26,14 @@ public class CustomerService {
         return customerRepository.findById(id);
     }
 
+    public Optional<Customer> getCustomerByNIK(String nik) {
+        return customerRepository.findByNIK(nik);
+    }
+
+    public List<Customer> getCustomerByFirstName(String firstName) {
+        return customerRepository.findByFirstName(firstName);
+    }
+
     public Customer createOrUpdateCustomer(Customer customer) {
         return customerRepository.save(customer);
     }

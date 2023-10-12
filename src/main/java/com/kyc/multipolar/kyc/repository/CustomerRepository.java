@@ -8,7 +8,7 @@ import java.util.List;
 import com.kyc.multipolar.kyc.domain.Customer;
 
 public interface CustomerRepository extends MongoRepository<Customer, String> {
-    Optional<Customer> findByNIK(String nik);
+    Optional<Customer> findByNik(String nik);
 
     @Query("{'firstName': {$regex: ?0, $options: 'i'}}")
     List<Customer> findByFirstName(String firstName);

@@ -2,9 +2,9 @@ package com.kyc.multipolar.kyc.domain;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import javax.validation.constraints.Email;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 
 import org.springframework.data.annotation.Id;
@@ -37,5 +37,6 @@ public class Customer implements Serializable {
     private String phoneNumber;
     private MembershipStatus membershipStatus;
     private Address address;
-    private LocalDate datOfBirth = LocalDate.now();
+    private LocalDate dateOfBirth = LocalDate.ofYearDay(1990, 1);
+    private LocalDateTime createdDateTime = LocalDateTime.now();
 }

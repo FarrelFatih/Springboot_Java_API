@@ -27,7 +27,7 @@ public class CustomerService {
     }
 
     public Optional<Customer> getCustomerByNIK(String nik) {
-        return customerRepository.findByNIK(nik);
+        return customerRepository.findByNik(nik);
     }
 
     public List<Customer> getCustomerByFirstName(String firstName) {

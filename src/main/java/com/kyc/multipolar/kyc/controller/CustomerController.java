@@ -74,7 +74,7 @@ public class CustomerController {
     }
 
     @GetMapping("/nik/{nik}")
-    public ResponseEntity<Customer> geByNIK(@PathVariable String nik) {
+    public ResponseEntity<Customer> getCustomerByNIK(@PathVariable String nik) {
         Optional<Customer> customer = customerService.getCustomerByNIK(nik);
         return customer.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }

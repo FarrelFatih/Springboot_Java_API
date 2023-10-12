@@ -18,7 +18,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.multipolar.bootcamp.kyc.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.kyc.multipolar.kyc.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());
@@ -26,8 +26,8 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Todo API")
-                .description("Api Todo")
+                .title("Customer API")
+                .description("Api Customer")
                 .version("1.0.0")
                 .build();
     }
